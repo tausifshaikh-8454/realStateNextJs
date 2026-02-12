@@ -1,0 +1,10 @@
+{
+    "prettier.bracketSameLine": false,
+    "editor.fontSize": 14,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+    "workbench.preferredHighContrastColorTheme": "Default High Contrast",
+    "editor.wrapOnEscapedLineFeeds": false,
+    "material-icon-theme.opacity": 1
+}
