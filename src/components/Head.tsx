@@ -28,7 +28,7 @@ const itemSubmenu: { title: string; href: string }[] = [
 export default function Head() {
   return (
     <header className="bg-transparent z-99 relative">
-      <div className="flex flex-row mx-auto max-w-[1440px] w-full py-5 px-[20px]">
+      <div className="flex flex-row mx-auto max-w-360 w-full p-5">
         <div className="w-[50%]">
           <Image src={logo} alt="Next.js logo" />
         </div>

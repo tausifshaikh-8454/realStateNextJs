@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <div
-      className="flex flex-col mx-auto h-screen bg-cover bg-no-repeat items-center bg-center -mt-20 justify-center align-middle"
+      className="flex flex-col mx-auto h-screen bg-cover bg-no-repeat items-center bg-center -mt-22 justify-center align-middle"
       style={{ backgroundImage: `url(${hro.src})` }}>
 
       <h1 className="font-Roboto font-medium text-[60px]/[72px] text-center mx-auto">
