@@ -38,7 +38,7 @@ export default function Head() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    className="font-Roboto font-medium text-[16px]"
+                    className="font-Roboto font-medium text-[16px] text-white"
                     href="/"
                   >
                     Home
@@ -48,7 +48,7 @@ export default function Head() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    className="font-Roboto font-medium text-[16px]"
+                    className="font-Roboto font-medium text-[16px] text-white"
                     href="/about-us"
                   >
                     About Us
@@ -63,7 +63,7 @@ export default function Head() {
                     {itemSubmenu.map((item) => (
                       <li key={item.title}>
                         <NavigationMenuLink>
-                          <Link href={item.href}>{item.title}</Link>
+                          <Link className="font-Roboto font-medium text-[16px] " href={item.href}>{item.title}</Link>
                         </NavigationMenuLink>
                       </li>
                     ))}
@@ -73,7 +73,7 @@ export default function Head() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    className="font-Roboto font-medium text-[16px]"
+                    className="font-Roboto font-medium text-[16px] text-white"
                     href="/about-us"
                   >
                     Events
@@ -83,7 +83,7 @@ export default function Head() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    className="font-Roboto font-medium text-[16px]"
+                    className="font-Roboto font-medium text-[16px] text-white"
                     href="/about-us"
                   >
                     Contact Us
