@@ -10,6 +10,8 @@ import bed from "../../../assets/feature/crdIcon/Icon-1.svg";
 import bath from "../../../assets/feature/crdIcon/Icon-2.svg";
 import dorm from "../../../assets/feature/crdIcon/Icon-3.svg";
 import Image, { StaticImageData } from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowRightIcon } from "lucide-react";
 
 const propDetails: {
   propName: string;
@@ -100,7 +102,7 @@ export default function Featuredprprty() {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
 
-      <div className="m-auto">
+      <div className="m-auto text-center">
         <Tabs defaultValue="overview" className="py-10 flex flex-row items-center">
           <TabsList className="flex flex-row bg-transparent gap-2 pb-10">
             <TabsTrigger
@@ -193,6 +195,9 @@ export default function Featuredprprty() {
             </div>
           </TabsContent>
         </Tabs>
+        <Button className="w-41.75 h-13.5 rounded-[60px] font-Roboto font-semibold text-[15px]/[28.5px] bg-[#E7C873] text-[#1A1A1A] mt-7">
+        See All Listing <ArrowRightIcon />
+        </Button>
       </div>
     </div>
   );
