@@ -11,7 +11,7 @@ export default function Cta() {
                 Discover a place you'll <br/>love to live
             </h2>
             <p className="font-Roboto font-regular text-[16px]/[30px] text-white">Pellentesque egestas elementum egestas faucibus sem. Velit nunc egestas ut morbi. Leo diam diam</p>
-            <Button className="w-47.5 h-13.75 rounded-[12px] bg-[#E7C873] text-[#1A1A1A]">View Properties<ArrowRightIcon /></Button>
+            <Button className="w-47.5 h-13.75 rounded-2xl bg-[#E7C873] text-[#1A1A1A]">View Properties<ArrowRightIcon /></Button>
       </div>
     </div>
   )
