@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export default function Metrics() {
   return (
-    <div className="flex flex-row justify-center items-center max-w-360 w-full py-41.25 px-10" >
+    <div className="flex flex-row justify-center items-center max-w-360 w-full py-41.25 px-10 m-auto"  >
       <div className="w-1/2 pr-25">
         <h2 className="font-Roboto font-medium text-[40px]/[52px] text-[#1A1A1A] pb-3">
           We Use Real Estate to Show Our Appreciation of The World
