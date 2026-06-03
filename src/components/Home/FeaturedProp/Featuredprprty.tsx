@@ -94,11 +94,11 @@ const propDetails: {
 
 export default function Featuredprprty() {
   return (
-    <div className="flex flex-col justify-center items-start py-25">
-      <h2 className="font-Roboto font-medium text-[40px]/[52px] text-[#1A1A1A]">
+    <div className="flex flex-col justify-center items-center py-25">
+      <h2 className="font-Roboto font-medium text-[40px]/[52px] text-[#1A1A1A] text-center">
         Featured Properties
       </h2>
-      <p className="font-Roboto font-regular text-[17px]/[32px] text-[#1A1A1A]">
+      <p className="font-Roboto font-regular text-[17px]/[32px] text-[#1A1A1A] text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
 

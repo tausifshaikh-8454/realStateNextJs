@@ -6,6 +6,7 @@ import Cta from "@/components/Home/Cta";
 import Metrics from "@/components/Home/Metrics";
 import ClientTestimony from "@/components/Home/ClientTestimony/ClientTestimony";
 import Article from "@/components/Home/Article&News/Article";
+import AppDwnld from "@/components/Home/AppDownload/AppDwnld";
 
 
 
@@ -19,6 +20,7 @@ export default function Home() {
       <Metrics/>
       <ClientTestimony/>
       <Article/>
+      <AppDwnld/>
     </>
   );
 }
