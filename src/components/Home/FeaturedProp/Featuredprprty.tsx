@@ -94,7 +94,7 @@ const propDetails: {
 
 export default function Featuredprprty() {
   return (
-    <div className="flex flex-col justify-center items-center py-25">
+    <div className="flex flex-col justify-center items-start py-25">
       <h2 className="font-Roboto font-medium text-[40px]/[52px] text-[#1A1A1A]">
         Featured Properties
       </h2>
@@ -135,24 +135,24 @@ export default function Featuredprprty() {
             <div className="max-w-360 w-full grid grid-cols-3 gap-4">
               {propDetails.map((singleProperty, index) => (
                 <div
-                  className="flex flex-col 2xl:w-[445px] 2xl:h-[445px] xl:w-[410px] xl:h-[410px]  justify-between card px-10 py-10 xl:px-5 xl:py-5 bg-no-repeat bg-cover"
+                  className="flex flex-col 2xl:w-111.25 2xl:h-111.25 xl:w-102.5 xl:h-102.5  justify-between card px-10 py-10 xl:px-5 xl:py-5 bg-no-repeat bg-cover"
                   key={index}
                   style={{
                     backgroundImage: `url(${singleProperty.propImage.src})`,
                   }}
                 >
                   <div className="flex flex-row gap-2">
-                    <p className="font-Roboto font-medium text-[13px]/[25px] uppercase text-white bg-[#1F4B43] w-fit px-[15px] py-[10px] rounded-3xl">
+                    <p className="font-Roboto font-medium text-[13px]/[25px] uppercase text-white bg-[#1F4B43] w-fit px-3.75 py-2.5 rounded-3xl">
                       {singleProperty.propType}
                     </p>
                     {singleProperty.featProp && (
-                      <p className="font-Roboto font-medium text-[13px]/[25px] uppercase text-[#1A1A1A] bg-[#E7C873] w-fit px-[15px] py-[10px] rounded-3xl">
+                      <p className="font-Roboto font-medium text-[13px]/[25px] uppercase text-[#1A1A1A] bg-[#E7C873] w-fit px-3.75 py-2.5 rounded-3xl">
                         {singleProperty.featProp}
                       </p>
                     )}
                   </div>
                   <div className="botttom">
-                    <h4 className="font-Roboto font-medium text-[20px]/[25px] text-white pb-1">
+                    <h4 className="font-Roboto font-medium text-[20px]/[25px] text-white text-left pb-1">
                       {singleProperty.propName}
                     </h4>
                     <div className="flex flex-row gap-2">

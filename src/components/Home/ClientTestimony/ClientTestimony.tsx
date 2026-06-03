@@ -43,10 +43,10 @@ export default function ClientTestimony() {
               modules={[Navigation, Autoplay]}
               slidesPerView={1}
               navigation
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 2500,
+              //   disableOnInteraction: false,
+              // }}
               loop={true}
             >
               <SwiperSlide>
@@ -65,8 +65,8 @@ export default function ClientTestimony() {
                   <p className="font-Roboto font-medium text-[20px] text-white my-10">
                     Searches for mutiplexes, property comparisons, and the loan
                     estimator. Works great. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dores.
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dores.
                   </p>
                 </div>
               </SwiperSlide>
@@ -87,8 +87,8 @@ export default function ClientTestimony() {
                   <p className="font-Roboto font-medium text-[20px] text-white my-10">
                     Searches for mutiplexes, property comparisons, and the loan
                     estimator. Works great. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dores.
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dores.
                   </p>
                 </div>
               </SwiperSlide>
@@ -98,8 +98,14 @@ export default function ClientTestimony() {
       </div>
 
       <div className="w-full border-t border-[#ffffff1f] bg-[#1A1A1A] px-10 py-25">
-        <Marquee speed={50} autoFill={false} direction="right" className="max-w-360 w-full m-auto flex flex-row ">
-          <div className="flex flex-row flex-nowrap justify-between items-center gap-37">
+        <p className="font-Roboto font-regular text-[16px]/[32px] text-white text-center mb-10">Thousands of world’s leading companies trust Space</p>
+        <Marquee
+          speed={50}
+          autoFill={false}
+          direction="right"
+          className="max-w-360 w-full m-auto flex flex-row"
+        >
+          <div className="flex flex-row flex-nowrap justify-between items-center 2xl:gap-37 xl:gap-30 gap:37">
             <img src={amazon.src} alt="Testimonial" />
             <img src={amd.src} alt="Testimonial" />
             <img src={cisco.src} alt="Testimonial" />
