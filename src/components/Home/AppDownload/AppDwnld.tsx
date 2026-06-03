@@ -11,16 +11,16 @@ export default function AppDwnld() {
                 <h2 className="font-Roboto font-medium text-[32px]/[64px] text-white">Download the App</h2>
                 <p className="font-Roboto font-regular text-[15px]/[28px] text-white">Take classes on the go with the just home app. Stream or download to watch on the plane, the subway, or wherever you learn best.</p>
                 <div className="dwnlBtn mt-10 flex flex-row gap-10">
-                    <div className="ctaButton bg-white flex flex-row w-fit py-[10px] px-[20px] justify-around items-center gap-4 rounded-[12px]">
+                    <div className="ctaButton bg-white flex flex-row w-48.75 h-15.75 justify-center items-center gap-3 rounded-2xl">
                         <img src={apple.src}/> 
-                        <div className="border-l-2 border-[#1f4b432d] pl-5">
+                        <div className="border-l-2 border-[#1f4b432d] px-3.75">
                             <p className="font-Roboto font-regular text-[12px]/[24px] text-[#1F4B43]">Download on the</p>
                             <p className="font-Roboto font-medium text-[16px]/[28px] text-[#1F4B43]">Apple Store</p>
                         </div>
                     </div>
-                    <div className="ctaButton bg-white flex flex-row w-fit py-[10px] px-[20px] justify-around items-center gap-4 rounded-[12px]">
+                    <div className="ctaButton bg-white flex flex-row w-48.75 h-15.75 justify-center items-center gap-3 rounded-2xl">
                         <img src={playStore.src}/> 
-                        <div className="border-l-2 border-[#1f4b432d] pl-5">
+                        <div className="border-l-2 border-[#1f4b432d] px-3.75">
                             <p className="font-Roboto font-regular text-[12px]/[24px] text-[#1F4B43]">Download on the</p>
                             <p className="font-Roboto font-medium text-[16px]/[28px] text-[#1F4B43]">Google Play</p>
                         </div>

@@ -7,6 +7,7 @@ import Metrics from "@/components/Home/Metrics";
 import ClientTestimony from "@/components/Home/ClientTestimony/ClientTestimony";
 import Article from "@/components/Home/Article&News/Article";
 import AppDwnld from "@/components/Home/AppDownload/AppDwnld";
+import Subscribenews from "@/components/Home/NewsLetter/Subscribenews";
 
 
 
@@ -21,6 +22,7 @@ export default function Home() {
       <ClientTestimony/>
       <Article/>
       <AppDwnld/>
+      <Subscribenews/>
     </>
   );
 }
