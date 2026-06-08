@@ -60,16 +60,16 @@ export default function Article() {
               <img src = {newPost.acf.featureimage} className="rounded-t-2xl" />
               <div className="desc px-5 py-5 flex flex-col justify-center items-center gap-2 m-auto">
                 <div className="flex flex-row gap-1 justify-center items-center">
-                  <p className="font-Roboto font-regular text-[12px]/[26px] text-[#3D3E3F]">
+                  <p className="font-Roboto font-regular text-[14px]/[26px] text-[#3D3E3F]">
                     {newPost.date.slice(0, 10)}
                   </p>
                   |
-                  <p className="font-Roboto font-regular Uppercase text-[12px]/[28px] text-[#3D3E3F]">
+                  <p className="font-Roboto font-regular capitalize text-[14px]/[28px] text-[#3D3E3F]">
                     {newPost.class_list[6].slice(9)}
                   </p>
                 </div>
                 <h4 className="font-Roboto font-medium text-[16px]/[28px] text-[#1a1a1a] text-center">
-                  {newPost.title.rendered.slice(0, 30) + "..."}
+                  {newPost.title.rendered}
                 </h4>
                 <button className="flex flex-row w-fit h-fit rounded-[07px] py-1.75 px-3 font-Roboto font-medium text-[14px] gap-2.5 text-[#1a1a1a] border border-[#E9E9E9] text-center">
                   Read More <ArrowRightIcon className="w-3.75" />
