@@ -59,7 +59,7 @@ export default function Article() {
             >
               <img src = {newPost.acf.featureimage} className="rounded-t-2xl" />
               <div className="desc px-5 py-5 flex flex-col justify-center items-center gap-2 m-auto">
-                <div className="flex flex-row gap-1 justify-center items-center">
+                <div className="flex flex-row gap-3 justify-center items-center">
                   <p className="font-Roboto font-regular text-[14px]/[26px] text-[#3D3E3F]">
                     {newPost.date.slice(0, 10)}
                   </p>

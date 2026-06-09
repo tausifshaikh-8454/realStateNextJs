@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import amd from "../../../assets/OurClients/AMD.svg";
 import amazon from "../../../assets/OurClients/amazon.svg";
 import cisco from "../../../assets/OurClients/cisco.svg";
@@ -13,8 +14,42 @@ import Marquee from "react-fast-marquee";
 import "swiper/css/navigation";
 import "swiper/css";
 import "./testiStyle.css";
+import { useEffect, useState } from "react";
+
+
+type testimony = {
+  id: "number";
+  title: {
+    rendered: "string";
+  }
+  content:{
+    rendered: "string";
+  } 
+  acf: {
+    imageurl: "string";
+    clientdesignation: "string";
+  };
+};
 
 export default function ClientTestimony() {
+  const [testmonis, setTesti] = useState<testimony[]>([]);
+
+  useEffect(() => {
+    const fecthTestimons = async () => {
+      try {
+        const { data } = await axios.get(
+          `${process.env.NEXT_PUBLIC_TESTIMONIAL_API}`,
+        );
+
+        setTesti(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fecthTestimons();
+  }, []);
+
   return (
     <>
       <div className="w-full bg-[#1A1A1A] px-10 py-25">
@@ -38,67 +73,45 @@ export default function ClientTestimony() {
               </p>
             </div>
           </div>
+
           <div className="w-[50%]">
             <Swiper
               modules={[Navigation, Autoplay]}
               slidesPerView={1}
               navigation
-              // autoplay={{
-              //   delay: 2500,
-              //   disableOnInteraction: false,
-              // }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
               loop={true}
             >
-              <SwiperSlide>
-                <div className="flex flex-col">
-                  <div className="flex flex-row gap-10 items-center">
-                    <img src={testiImg.src} alt="" />
-                    <div className="">
-                      <p className="font-Roboto font-medium text-[20px] text-white">
-                        Cameron Williamson
-                      </p>
-                      <p className="font-Roboto font-regular text-[20px] text-white">
-                        Designer
-                      </p>
+              {testmonis.map((singTesti) => (
+                <SwiperSlide key={singTesti.id}>
+                  
+                  <div className="flex flex-col" >
+                    <div className="flex flex-row gap-10 items-center">
+                      
+                      <img src = {singTesti.acf.imageurl} alt="" />
+                      <div className="">
+                        <p className="font-Roboto font-medium text-[20px] text-white"  dangerouslySetInnerHTML= {{__html:singTesti.title.rendered}} />
+                        <p className="font-Roboto font-regular text-[20px] text-white"  dangerouslySetInnerHTML= {{__html:singTesti.acf.clientdesignation}}/>
+                          
+                      </div>
                     </div>
+                    <p className="font-Roboto font-medium text-[20px] text-white my-10" dangerouslySetInnerHTML= {{__html:singTesti.content.rendered}} />
                   </div>
-                  <p className="font-Roboto font-medium text-[20px] text-white my-10">
-                    Searches for mutiplexes, property comparisons, and the loan
-                    estimator. Works great. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dores.
-                  </p>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="flex flex-col">
-                  <div className="flex flex-row gap-10 items-center">
-                    <img src={testiImg.src} alt="" />
-                    <div className="">
-                      <p className="font-Roboto font-medium text-[20px] text-white">
-                        Cameron Williamson
-                      </p>
-                      <p className="font-Roboto font-regular text-[20px] text-white">
-                        Designer
-                      </p>
-                    </div>
-                  </div>
-                  <p className="font-Roboto font-medium text-[20px] text-white my-10">
-                    Searches for mutiplexes, property comparisons, and the loan
-                    estimator. Works great. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dores.
-                  </p>
-                </div>
-              </SwiperSlide>
+                  
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>
       </div>
 
       <div className="w-full border-t border-[#ffffff1f] bg-[#1A1A1A] px-10 py-25">
-        <p className="font-Roboto font-regular text-[16px]/[32px] text-white text-center mb-10">Thousands of world’s leading companies trust Space</p>
+        <p className="font-Roboto font-regular text-[16px]/[32px] text-white text-center mb-10">
+          Thousands of world’s leading companies trust Space
+        </p>
         <Marquee
           speed={50}
           autoFill={false}
