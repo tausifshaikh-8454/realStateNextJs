@@ -7,6 +7,7 @@ import post4 from "../../../assets/newsArticle/shop.webp";
 import { ArrowRightIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 type Posts = {
   id: "number";
@@ -17,7 +18,7 @@ type Posts = {
     rendered: "string";
   };
   date: "string";
-
+  slug: 'string';
   class_list: "string";
   acf: {
     featureimage: "url";
@@ -71,9 +72,10 @@ export default function Article() {
                 <h4 className="font-Roboto font-medium text-[16px]/[28px] text-[#1a1a1a] text-center">
                   {newPost.title.rendered}
                 </h4>
-                <button className="flex flex-row w-fit h-fit rounded-[07px] py-1.75 px-3 font-Roboto font-medium text-[14px] gap-2.5 text-[#1a1a1a] border border-[#E9E9E9] text-center">
+                <button  className="flex flex-row w-fit h-fit rounded-[07px] py-1.75 px-3 font-Roboto font-medium text-[14px] gap-2.5 text-[#1a1a1a] border border-[#E9E9E9] text-center">
                   Read More <ArrowRightIcon className="w-3.75" />
                 </button>
+                <Link href={`/Blog/${newPost.slug}`}>Read More</Link>
               </div>
             </div>
           ))}
