@@ -74,7 +74,7 @@ export default function Head() {
                 <NavigationMenuLink asChild>
                   <Link
                     className="font-Roboto font-medium text-[16px] text-white"
-                    href="/about-us"
+                    href="/Blog"
                   >
                     Events
                   </Link>
