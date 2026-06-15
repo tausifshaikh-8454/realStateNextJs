@@ -1,45 +1,45 @@
-"use client";
+
 import axios from "axios";
-import { useEffect, useState } from "react";
+
 
 type props = {
-  params: Promise<{
+  params: Promise< {
     slug: string;
   }>;
 };
 
 type blog = {
   title: {
-    rendered: "string";
+    rendered: string;
   };
   acf: {
-    featureimage: "string";
+    featureimage: string;
   };
+  id: number;
 };
 
-export default function Page({ params }: props) {
-  const [blogs, setBlogDet] = useState<blog[]>([]);
+async function blogDetAPI(slug: string): Promise<blog[]> {
+  try {
+    const { data } = await axios.get<blog[]>(
+      `${process.env.NEXT_PUBLIC_POST_API}?slug=${slug}`,
+    );
+    console.log(data)
+    return data;
+  } catch (error) {
+   throw error;
+  }
+}
 
-  useEffect(() => {
-    const getAPIDet = async () => {
-      try {
-        const { data } = await axios.get(
-          `${process.env.NEXT_PUBLIC_POST_API}/?slug=${(await params).slug}`,
-        );
+export default async function Page({ params }: props) {
+ 
+  const { slug } = await params
+  let blogs = await blogDetAPI(slug);
 
-        setBlogDet(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    getAPIDet();
-  }, [params]);
 
   return (
     <>
       {blogs.map((BlogDet) => (
-        <div className="">
+        <div className="" key={BlogDet.id}>
           <img src={BlogDet.acf.featureimage} />
           <p className="">{BlogDet.title.rendered}</p>
         </div>

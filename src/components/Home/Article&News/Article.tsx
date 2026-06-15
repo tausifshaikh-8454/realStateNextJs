@@ -1,11 +1,4 @@
-"use client";
-import Image, { StaticImageData } from "next/image";
-import post1 from "../../../assets/newsArticle/newsImage.webp";
-import post2 from "../../../assets/newsArticle/aprt2.webp";
-import post3 from "../../../assets/newsArticle/office.webp";
-import post4 from "../../../assets/newsArticle/shop.webp";
 import { ArrowRightIcon } from "lucide-react";
-import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 
@@ -25,22 +18,20 @@ type Posts = {
   };
 };
 
-export default function Article() {
-  const [APIposts, setPosts] = useState<Posts[]>([]);
+async function homePost():Promise<Posts[]> {
+  try {
+    const { data } = await axios.get<Posts[]>(`${process.env.NEXT_PUBLIC_POST_API}`);
+    return data;
 
-  useEffect(() => {
-    const fetchApi = async () => {
-      try {
-        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_POST_API}`);
+  } catch (error) {
+    throw error;
+  }
+}
 
-        setPosts(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
 
-    fetchApi();
-  }, []);
+export default  async function Article() {
+  
+  const APIposts = await homePost()
 
   return (
     <>
